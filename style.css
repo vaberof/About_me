@@ -1,5 +1,4 @@
 * {
-	/*font-family: 'Raleway', sans-serif;*/
 	font-family: 'Sora', sans-serif;
 	color: white;
 }
@@ -23,7 +22,6 @@
 	position: fixed;
 	height: 50px;
 	background-color: black;	
-	/*border-bottom: 1px solid white;	*/
 	top: 0;
 	right: 0;
 	left: 0;
