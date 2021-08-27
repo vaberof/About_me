@@ -1,0 +1,419 @@
+* {
+	/*font-family: 'Raleway', sans-serif;*/
+	font-family: 'Sora', sans-serif;
+	color: white;
+}
+
+.container-bg {				/*Контейнер для бекграунда*/
+	width: 100%;
+	height: 100vh;
+	background: black;
+}
+
+.container-bg img {			/*Задний фон section-1*/
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	left: 0;
+	right: 0;
+	object-fit: cover;
+}
+
+.topbar-background {			/*Задний фон верхней панели*/
+	position: fixed;
+	height: 50px;
+	background-color: black;	
+	/*border-bottom: 1px solid white;	*/
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 1;
+}
+
+.topbar-mainhead {				/*Название сайта: "About me"*/
+	display: inline-block;
+	position: relative;
+	text-align: center;
+	color: white;
+	border: 2px solid whitesmoke;	
+	border-radius: 6px;
+	top: -10px;
+	width: 135px;
+	left: 150px;
+	transition: color 1.5s ease;
+	transition: background-color 1.8s ease ;
+}
+
+.topbar-mainhead:hover{
+	color: black;					/*Наведение на About me*/
+	background-color: white;	
+}
+
+
+
+.topbar-links-container {		/*Контейнер для всех ссылок на верхней панели*/
+	display: flex;
+	position: absolute;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	width: 0;
+	border: none;
+	outline: none;
+}
+
+.topbar-link {						/*Все ссылки на верхней панели*/
+	position: relative;
+	font-size: 20px;
+	color: white;
+	background-color: black;
+	text-decoration: none;
+	margin: 15px;
+	top: -72px;
+	left: 550px;
+}
+
+.contact {								/*Ссылка на верхней панели Contact*/
+	position: fixed;
+	top: 0%;
+	left: 85%;
+}
+
+.topbar-link::after {			/*Линия под каждой ссылкой*/
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 1px;
+	background: white;
+	left: 0;
+	bottom: 0;
+}
+
+.underline-anim::after {				/*Анимация линии под каждой ссылкой*/
+	transform: scale(0, 1);
+	transition: transform 0.3s ease;
+}
+
+
+.underline-anim:hover::after {			/*Анимация линии при наведении на каждую ссылку на верхней панели*/
+	transform: scale(1, 1);
+}
+
+
+
+
+.container-whoami {					/*Контейнер для кнопки Who Am I*/
+	position: absolute;
+	top: 10%;
+	left: 50%;
+	transform: translate(-50%, -7%);
+
+}
+
+.button-whoami {							/*Кнопка Who Am I*/
+	display: inline-block;
+	position: relative;
+	text-align: center;
+	font-size: 32px;
+	border: 2px solid white;
+	border-radius: 6px;
+	width: 200px;
+	/*top: 10px;*/
+	color: white;
+	background-color: black;
+	transition: border-color 1.2s ease 1ms,
+				transform 1.2s ease 1ms;	
+}
+
+.button-whoami:hover {						/*Наведение на кнопку Who Am I*/
+	color: black;
+	background-color: white;
+	border: 2px solid black;
+	transform: scale(1.1);
+}
+
+
+.myself-container {							/*Контейнер для всего MYSELF*/
+	position: absolute;
+	left: 0;
+	right: 0%;
+	top: 30%;
+	margin: 0 auto;
+	border: 1px solid white;
+	height: 60%;
+	width: 99%;	
+}
+
+
+.topic-myself {								/*Название MYSELF*/
+
+	display: block;
+	position: relative;
+	text-align: center;
+	font-size: 20px;
+	height: 20px;
+	top: -15px;
+}
+
+.myself-description {						/*Описание(текст) MYSELF*/
+	display: block;
+	position: relative;
+	font-size: 20px;
+	margin: 10px;
+}
+
+p {
+	line-height: 1.5;
+}
+
+.myself-description-photo {					/*Фотография MYSELF*/
+	display: block;
+	position: relative;
+	--img-url: url("C:/All_Projects/About me/Images/me-photo.jpg");
+	background-size: 80%;
+	background-repeat: no-repeat;
+	margin-top: 5px;
+	margin-right: 10px;
+	flex-shrink: 0;
+	height: 90%;
+	width: 26%;
+	border: 8px solid transparent;
+	background-origin: border-box;
+	background-clip: content-box, border-box;
+	background-size: cover;
+	box-sizing: border-box;
+	box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
+  	object-fit: cover;
+  	justify-content: center;
+  	border-radius: 50%;
+  	background-image: var(--img-url), linear-gradient(to bottom right, #800080, #FFA500);
+
+	float: right;	
+}
+
+.private-info-background {			/*Бекграунд для инфы про меня*/
+	position: absolute;
+	width: 100%;
+	height: 105vh;
+	background: black;
+	top: 100%;
+	left: 0;
+	right: 0;
+	object-fit: cover;
+}
+
+.private-info-container {			/*Контейнер для инфы про меня*/
+	display: flex;
+	position: relative;
+	flex-direction: row;
+	width: 100%;
+	height: 100vh;
+	left: 0;
+	right: 0;
+	justify-content: center;
+}
+
+.skills {							/*контейнер для Skills*/
+	position: relative;
+	border: 1px solid white;
+	width: 40%;
+	height: 50%;
+	margin-left: 7em;
+	margin-right: 6em;
+	margin-top: 15em;
+	transition: transform 0.4s ease;
+}
+
+.skills:hover {
+	transform: scale(1.05);
+	box-shadow: 0px 0px 20px 0px rgba(0, 0, 255, 1);
+}
+
+
+.title-skills {						/*Название Skills*/
+	text-align: center;
+}
+
+.html {								/*html Skill*/
+	margin-bottom: 5px;
+}
+
+.css {
+	margin-bottom: 5px;				/*css Skill*/
+}
+
+.unity {
+	margin-bottom: 5px;				/*unity Skill*/
+}
+
+.projects {							/*контйнер для Projects*/
+	position: relative;
+	border: 1px solid white;
+	width: 40%;
+	height: 50%;
+	margin-right: 6em;
+	margin-top: 15em;
+	transition: transform 0.4s ease;
+}
+
+.projects:hover {
+	transform: scale(1.05);
+	box-shadow: 0px 0px 20px 0px rgba(0, 255, 0, 1);
+	box-shadow:    0px 0px 20px 0px rgba(0, 255, 0, 1);
+	box-shadow:         0px 0px 20px 0px rgba(0, 255, 0, 1);
+}
+
+
+.title-projects {					/*Название Projects*/
+	text-align: center;
+}
+
+.about-me {							/*about-me Project*/
+	margin-bottom: 5px;
+}
+
+.escapeyourself {					/*escapeyourself Project*/
+	margin-bottom: 5px;
+}
+		
+.career {							/*Контейнер для Career*/
+	position: relative;
+	border: 1px solid white;
+	width: 40%;
+	height: 50%;
+	margin-right: 6em;
+	margin-top: 15em;
+	transition: transform 0.4s ease;
+
+}
+
+.career:hover {
+	transform: scale(1.05);
+	box-shadow: 0px 0px 20px 0px rgba(199,21,133, 1);
+
+}
+
+
+.title-career {						/*Название Career*/
+	text-align: center;			
+}
+	
+.schoolboy {						/*Пример в карьеру*/
+	margin-bottom: 5px;
+}
+
+.student {
+	margin-bottom: 5px;
+}
+
+.social-media-background {      /*Задний фон нижней панели*/
+    position: absolute;
+    height: 7vh;
+    background-color: #222;
+    right: 0;
+    left: 0;
+    /*border-top: 1px solid white;*/
+}
+
+.contact-icons {                /*Текст на нижней панели: "Find me"*/
+    position: absolute;     
+    left: 150px;
+    bottom: -5px;
+    color: white;
+}
+
+.lowbar-title {					/*Текст на нижней панели: "Made by vaber"*/
+    position: absolute;	
+  	right: 150px;
+  	bottom: 1px;
+  	color:  white;
+  	font-size: 14px;
+  	opacity: 0.7;
+  	transition: 0.5s ease;
+}
+
+.lowbar-title:hover {		/*Наведение на текст на нижней панели: "Made by vaber"*/
+	opacity: 1;
+}
+
+
+.social-media-all-icons {       /*Все иконки на нижней панели*/
+    display: inline-block;
+    position: absolute;
+    bottom: 0px;
+    left: 450px;
+    margin: 5px;
+
+}
+
+.git {
+	background-image: url("C:/All_Projects/About me/Images/git.png");       /*Иконка git*/
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 33px;
+    height: 33px;
+    display: inline-block;
+    position: relative;
+    margin-right: 7px;
+    border-radius: 8px;
+    transition: 0.7s ease;
+    top: 2px;
+}
+
+.git:hover {						/*Наведение на кнопку git*/ 
+	transform: scale(1.17);
+}
+
+.vk {
+    background-image: url("C:/All_Projects/About me/Images/vk-icon2.jpeg");       /*Иконка vk*/
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    position: relative;
+    margin-right: 7px;
+    border-radius: 8px;
+    transition: 0.7s ease;
+
+}
+
+.vk:hover {                         /*Наведение на кнопку vk*/  
+    transform: scale(1.2);  
+}
+
+
+.instagram {
+    background-image: url("C:/All_Projects/About me/Images/instagram-icon.jpeg");     /*Иконка instagram*/
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    position: relative;
+    margin-right: 7px;
+    border-radius: 8px;
+    transition: 0.7s ease;
+}
+
+.instagram:hover {
+    transform: scale(1.2);      /*Наведение на кнопку instagram*/
+}
+
+.youtube {
+    background-image: url("C:/All_Projects/About me/Images/youtube-icon.jpeg");       /*Иконка youtube*/
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    position: relative;
+    margin-right: 7px;
+    border-radius: 8px;
+    transition: 0.7s ease;
+}
+
+.youtube:hover {            /*Наведение на кнопку youtube*/
+    transform: scale(1.2);
+}
